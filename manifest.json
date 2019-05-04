@@ -1,0 +1,83 @@
+{
+	"manifest_version": 2,
+
+	"version": "1.0.3",
+
+	"name": "Goodreads Everywhere",
+	"short_name": "Goodreads Everywhere",
+	"description": "A must-have extension for all bookworms, Goodreads Everywhere adds Goodreads ratings to Amazon, Audible, Google Play, and more.",
+	"icons": {
+		"16": "resources/icon16.png",
+		"32": "resources/icon32.png",
+		"48": "resources/icon48.png",
+		"128": "resources/icon128.png"
+	},
+	"author": "Ernesta  Orlovaitė",
+
+	"offline_enabled": false,
+
+	"permissions": [
+		"*://*.amazon.ca/*",
+		"*://*.amazon.cn/*",
+		"*://*.amazon.co.jp/*",
+		"*://*.amazon.co.uk/*",
+		"*://*.amazon.com/*",
+		"*://*.amazon.com.au/*",
+		"*://*.amazon.com.br/*",
+		"*://*.amazon.com.mx/*",
+		"*://*.amazon.de/*",
+		"*://*.amazon.es/*",
+		"*://*.amazon.fr/*",
+		"*://*.amazon.it/*",
+		"*://*.amazon.in/*",
+		"*://*.amazon.nl/*",
+    "*://*.audible.co.uk/*",
+    "*://*.audible.co.jp/*",
+    "*://*.audible.com/*",
+    "*://*.audible.com.au/*",
+    "*://*.audible.de/*",
+    "*://*.audible.fr/*",
+    "*://*.audible.it/*",
+		"*://*.bookdepository.com/*",
+    "*://*.play.google.com/*",
+    "*://*.strandbooks.com/*",
+		"*://*.goodreads.com/*"
+	],
+	"content_scripts": [{
+		"matches": [
+      "*://*.amazon.ca/*",
+			"*://*.amazon.cn/*",
+			"*://*.amazon.co.jp/*",
+			"*://*.amazon.co.uk/*",
+			"*://*.amazon.com/*",
+			"*://*.amazon.com.au/*",
+			"*://*.amazon.com.br/*",
+			"*://*.amazon.com.mx/*",
+			"*://*.amazon.de/*",
+			"*://*.amazon.es/*",
+			"*://*.amazon.fr/*",
+			"*://*.amazon.it/*",
+			"*://*.amazon.in/*",
+			"*://*.amazon.nl/*",
+      "*://*.audible.co.uk/*",
+      "*://*.audible.co.jp/*",
+      "*://*.audible.com/*",
+      "*://*.audible.com.au/*",
+      "*://*.audible.de/*",
+      "*://*.audible.fr/*",
+      "*://*.audible.it/*",
+			"*://*.bookdepository.com/*",
+      "*://*.play.google.com/*",
+      "*://*.strandbooks.com/*"
+		],
+		"css": [
+			"rating.css"
+		],
+		"js": [
+			"jquery.min.js",
+			"rating.js"
+		],
+
+		"run_at": "document_end"
+	}]
+}
